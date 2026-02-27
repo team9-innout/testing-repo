@@ -1,10 +1,4 @@
----
-globs: ["**/*"]
-alwaysApply: false
----
+## ADR 1: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
 
-# Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
-
-## Policies
-
+Policies:
 1. Implement defensive input validation and boundary checking at all configuration and environment management touchpoints. This includes: (1) validating environment variables and configuration values before use, (2) implementing type guards and runtime checks for dynamic inputs, (3) providing fallback values for missing or invalid configuration, (4) sanitizing user inputs in form fields and UI components, and (5) establishing clear contracts at module boundaries where configuration data flows between layers. The validation logic should be applied consistently across server-side routes, data models, client-side hooks, and UI components.
