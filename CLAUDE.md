@@ -14,7 +14,14 @@ Policies:
 
 ---
 
-## ADR 3: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
+## ADR 3: Adopt Message Queue Boundaries for Component Communication in React UI Framework
+
+Policies:
+1. Implement message queue boundaries as the primary inter-component communication pattern for event-driven interactions in the UI framework. This architectural decision establishes a publish-subscribe or event bus pattern that allows components to emit and consume messages without direct dependencies. Components like ExternalInput, drag-and-drop handlers, and Fields use message queues to broadcast state changes, user interactions, and lifecycle events, enabling loose coupling while maintaining predictable data flow.
+
+---
+
+## ADR 4: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
 
 Policies:
 1. Implement defensive input validation and boundary checking at all configuration and environment management touchpoints. This includes: (1) validating environment variables and configuration values before use, (2) implementing type guards and runtime checks for dynamic inputs, (3) providing fallback values for missing or invalid configuration, (4) sanitizing user inputs in form fields and UI components, and (5) establishing clear contracts at module boundaries where configuration data flows between layers. The validation logic should be applied consistently across server-side routes, data models, client-side hooks, and UI components.
