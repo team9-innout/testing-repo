@@ -1,10 +1,10 @@
 ---
-globs: ["**/*"]
+globs: ["packages/core/**"]
 alwaysApply: false
 ---
 
-# Adopt Environment-Aware Logging and Configuration Management Pattern
+# Adopt Message Queue Boundaries for Component Communication in React UI Framework
 
 ## Policies
 
-1. Implement a standardized environment-aware configuration and logging pattern across all packages and applications. This pattern includes: (1) Environment detection logic that distinguishes between development and production modes, (2) Conditional logging mechanisms that adjust verbosity based on the runtime environment, (3) Centralized configuration loading that respects environment variables and runtime context, and (4) Consistent error handling and observability hooks that adapt to the execution environment. The pattern is applied uniformly across core libraries (use-sidebar-resize.ts), server-side code (pages.server.ts), and build tooling (create-puck-app).
+1. Implement message queue boundaries as the primary inter-component communication pattern for event-driven interactions in the UI framework. This architectural decision establishes a publish-subscribe or event bus pattern that allows components to emit and consume messages without direct dependencies. Components like ExternalInput, drag-and-drop handlers, and Fields use message queues to broadcast state changes, user interactions, and lifecycle events, enabling loose coupling while maintaining predictable data flow.
