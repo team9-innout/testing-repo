@@ -14,7 +14,14 @@ Policies:
 
 ---
 
-## ADR 3: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
+## ADR 3: Adopt Environment-Aware Logging and Configuration Management Pattern
+
+Policies:
+1. Implement a standardized environment-aware configuration and logging pattern across all packages and applications. This pattern includes: (1) Environment detection logic that distinguishes between development and production modes, (2) Conditional logging mechanisms that adjust verbosity based on the runtime environment, (3) Centralized configuration loading that respects environment variables and runtime context, and (4) Consistent error handling and observability hooks that adapt to the execution environment. The pattern is applied uniformly across core libraries (use-sidebar-resize.ts), server-side code (pages.server.ts), and build tooling (create-puck-app).
+
+---
+
+## ADR 4: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
 
 Policies:
 1. Implement defensive input validation and boundary checking at all configuration and environment management touchpoints. This includes: (1) validating environment variables and configuration values before use, (2) implementing type guards and runtime checks for dynamic inputs, (3) providing fallback values for missing or invalid configuration, (4) sanitizing user inputs in form fields and UI components, and (5) establishing clear contracts at module boundaries where configuration data flows between layers. The validation logic should be applied consistently across server-side routes, data models, client-side hooks, and UI components.
