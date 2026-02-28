@@ -1,10 +1,10 @@
 ---
-globs: ["packages/core/**"]
+globs: ["apps/**"]
 alwaysApply: false
 ---
 
-# Adopt Message Queue Boundaries for Component Communication in React UI Framework
+# Adopt Environment-Based Configuration for External API Integration in Client-Side Applications
 
 ## Policies
 
-1. Implement message queue boundaries as the primary inter-component communication pattern for event-driven interactions in the UI framework. This architectural decision establishes a publish-subscribe or event bus pattern that allows components to emit and consume messages without direct dependencies. Components like ExternalInput, drag-and-drop handlers, and Fields use message queues to broadcast state changes, user interactions, and lifecycle events, enabling loose coupling while maintaining predictable data flow.
+1. Implement environment-based configuration management using environment variables for all external API integrations in public-facing applications. This approach centralizes API configuration in application layout and theme configuration files, using runtime environment variable injection to manage secrets. The pattern ensures that API keys and sensitive configuration are never hardcoded in source code, are environment-specific, and are properly scoped to server-side or build-time contexts where appropriate. Configuration is initialized at the application root level (document/layout components) to ensure consistent availability throughout the component tree.
