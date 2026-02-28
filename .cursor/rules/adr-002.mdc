@@ -1,10 +1,10 @@
 ---
-globs: ["apps/**"]
+globs: ["**/*"]
 alwaysApply: false
 ---
 
-# Adopt Environment-Based Configuration for External API Integration in Client-Side Applications
+# Adopt Environment-Aware Logging and Configuration Management Pattern
 
 ## Policies
 
-1. Implement environment-based configuration management using environment variables for all external API integrations in public-facing applications. This approach centralizes API configuration in application layout and theme configuration files, using runtime environment variable injection to manage secrets. The pattern ensures that API keys and sensitive configuration are never hardcoded in source code, are environment-specific, and are properly scoped to server-side or build-time contexts where appropriate. Configuration is initialized at the application root level (document/layout components) to ensure consistent availability throughout the component tree.
+1. Implement a standardized environment-aware configuration and logging pattern across all packages and applications. This pattern includes: (1) Environment detection logic that distinguishes between development and production modes, (2) Conditional logging mechanisms that adjust verbosity based on the runtime environment, (3) Centralized configuration loading that respects environment variables and runtime context, and (4) Consistent error handling and observability hooks that adapt to the execution environment. The pattern is applied uniformly across core libraries (use-sidebar-resize.ts), server-side code (pages.server.ts), and build tooling (create-puck-app).
