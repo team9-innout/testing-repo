@@ -21,7 +21,14 @@ Policies:
 
 ---
 
-## ADR 4: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
+## ADR 4: Adopt Environment-Aware Configuration Management with Explicit Public API Contracts
+
+Policies:
+1. Implement environment-aware configuration management through explicit public API contracts that distinguish between client-side and server-side configuration access. This architectural decision mandates: (1) Configuration values are accessed through well-defined public interfaces that encode environment constraints at the type level, (2) Server-only configuration (e.g., database credentials, API keys) is isolated in .server.ts modules that cannot be imported by client code, (3) Client-accessible configuration is explicitly exposed through public contracts with runtime validation, (4) Shared libraries and components use environment-agnostic interfaces that adapt based on execution context, and (5) Configuration access patterns are consistent across routes, models, hooks, and components.
+
+---
+
+## ADR 5: Adopt Defensive Input Validation and Boundary Checking for Configuration and Environment Management
 
 Policies:
 1. Implement defensive input validation and boundary checking at all configuration and environment management touchpoints. This includes: (1) validating environment variables and configuration values before use, (2) implementing type guards and runtime checks for dynamic inputs, (3) providing fallback values for missing or invalid configuration, (4) sanitizing user inputs in form fields and UI components, and (5) establishing clear contracts at module boundaries where configuration data flows between layers. The validation logic should be applied consistently across server-side routes, data models, client-side hooks, and UI components.

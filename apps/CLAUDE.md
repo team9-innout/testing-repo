@@ -21,7 +21,14 @@ Policies:
 
 ---
 
-## ADR 4: Adopt Environment-Based Configuration for External API Integration in Client-Side Applications
+## ADR 4: Adopt Centralized Configuration Management for Public-Facing Application Entry Points
+
+Policies:
+1. Implement centralized runtime configuration management at application entry points using framework-specific configuration files. Each public-facing application establishes its configuration sources at the root level through dedicated configuration files that serve as the single source of truth for runtime settings, theming, and layout specifications. This approach leverages framework conventions (_document.tsx, layout.tsx, theme.config.tsx) to provide consistent configuration initialization across different application types within the monorepo.
+
+---
+
+## ADR 5: Adopt Environment-Based Configuration for External API Integration in Client-Side Applications
 
 Policies:
 1. Implement environment-based configuration management using environment variables for all external API integrations in public-facing applications. This approach centralizes API configuration in application layout and theme configuration files, using runtime environment variable injection to manage secrets. The pattern ensures that API keys and sensitive configuration are never hardcoded in source code, are environment-specific, and are properly scoped to server-side or build-time contexts where appropriate. Configuration is initialized at the application root level (document/layout components) to ensure consistent availability throughout the component tree.
