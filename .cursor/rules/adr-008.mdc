@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/components/**"]
+alwaysApply: false
+---
+
+# Adopt Index File Pattern for Component Module Exports in UI Framework
+
+## Policies
+
+1. Implement the index file (barrel export) pattern for all component modules in the UI framework. Each component directory contains an index.tsx file that serves as the single entry point for that component, re-exporting the public API while hiding internal implementation details. This pattern is consistently applied across core components including Canvas, Layout, and ViewportControls within the Puck component system.

@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/**"]
+alwaysApply: false
+---
+
+# Adopt Custom React Hooks for Encapsulating Reusable UI Logic in Core Library
+
+## Policies
+
+1. Implement a custom React hooks architecture as the primary pattern for encapsulating and sharing reusable UI logic throughout the core library. This includes creating specialized hooks for specific concerns such as use-local-value, use-is-focused, use-deep-field, use-parent, use-loaded-overrides, use-preview-mode-hotkeys, use-inject-css, use-reset-auto-zoom, and use-on-drag-finished. Each hook is isolated in its own module within the lib directory or component-specific lib subdirectories, following a clear naming convention (use-*) and single-responsibility principle. The hooks encapsulate state management, side effects, context consumption, and complex behavioral logic, exposing clean interfaces to consuming components.

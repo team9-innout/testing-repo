@@ -1,10 +1,14 @@
 ---
-globs: ["apps/**"]
+globs: ["packages/core/**"]
 alwaysApply: false
 ---
 
-# Adopt Centralized Configuration Management for Public-Facing Application Entry Points
+# Adopt Co-located Test Files with __tests__ Directory Pattern for Component and Library Testing
 
 ## Policies
 
-1. Implement centralized runtime configuration management at application entry points using framework-specific configuration files. Each public-facing application establishes its configuration sources at the root level through dedicated configuration files that serve as the single source of truth for runtime settings, theming, and layout specifications. This approach leverages framework conventions (_document.tsx, layout.tsx, theme.config.tsx) to provide consistent configuration initialization across different application types within the monorepo.
+1. Adopt a co-located __tests__ directory pattern with .spec.tsx naming convention for organizing test files. Test files are placed in __tests__ directories adjacent to the code they test, using descriptive names that mirror the tested modules with a .spec.tsx extension. This pattern is applied consistently across:
+- Component testing (e.g., components/Puck/__tests__/index.tsx)
+- Library function testing (e.g., lib/__tests__/resolve-component-data.spec.tsx, lib/__tests__/migrate.spec.tsx)
+
+The .spec.tsx extension indicates TypeScript/TSX test files, supporting React component testing with JSX syntax. The __tests__ directory convention is widely recognized by testing frameworks and build tools for automatic test discovery.

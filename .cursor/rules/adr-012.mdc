@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/**"]
+alwaysApply: false
+---
+
+# Adopt Centralized Test Helper and Mocking Infrastructure for Component Testing
+
+## Policies
+
+1. Implement a centralized test helper and mocking infrastructure using dedicated __helpers__ and __tests__ directories with shared utilities. This includes: (1) Creating reusable test helpers in __helpers__/index.tsx for common test setup and teardown operations, (2) Standardizing mock implementations for component data resolution, (3) Establishing consistent patterns for testing React components with TypeScript (.spec.tsx convention), and (4) Providing shared fixtures and utilities that can be imported across test suites to ensure consistency in testing approach.

@@ -1,10 +1,1 @@
----
-globs: ["**/*"]
-alwaysApply: false
----
-
-# Adopt Environment-Aware Configuration Management with Explicit Public API Contracts
-
-## Policies
-
-1. Implement environment-aware configuration management through explicit public API contracts that distinguish between client-side and server-side configuration access. This architectural decision mandates: (1) Configuration values are accessed through well-defined public interfaces that encode environment constraints at the type level, (2) Server-only configuration (e.g., database credentials, API keys) is isolated in .server.ts modules that cannot be imported by client code, (3) Client-accessible configuration is explicitly exposed through public contracts with runtime validation, (4) Shared libraries and components use environment-agnostic interfaces that adapt based on execution context, and (5) Configuration access patterns are consistent across routes, models, hooks, and components.
+ADR for adopting mocking strategy in state management store testing with YAML frontmatter targeting store slice tests

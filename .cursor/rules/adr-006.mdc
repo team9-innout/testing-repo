@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Environment-Aware Configuration Management Across Application Layers
+
+## Policies
+
+1. Implement a standardized configuration and environment management pattern that is accessible across all architectural layers - from server-side routes and models to client-side components and hooks. This pattern provides consistent access to environment variables, runtime configuration, and context-aware settings throughout the application stack. The implementation uses a centralized configuration approach that can be consumed by server components (routes, models), client components (UI fields, form components), and utility functions (custom hooks) without coupling them to specific environment detection mechanisms.
