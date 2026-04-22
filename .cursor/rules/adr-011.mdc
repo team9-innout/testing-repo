@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/**"]
+alwaysApply: false
+---
+
+# Adopt Snapshot Testing for Core Data Transformation and State Management Logic
+
+## Policies
+
+1. Implement snapshot testing for core data transformation functions and reducer actions. Test files are organized in __tests__ directories co-located with the source code (packages/core/reducer/actions/__tests__/, packages/core/lib/data/__tests__/). Snapshot tests capture the complete output of operations like tree walking, state transformations, and reducer actions, storing them as serialized snapshots that are version-controlled alongside the code. This approach is specifically applied to the testing.snapshot facet within the CI/CD pipeline to ensure output consistency across builds.

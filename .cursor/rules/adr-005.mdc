@@ -1,0 +1,10 @@
+---
+globs: ["apps/**"]
+alwaysApply: false
+---
+
+# Adopt Centralized Configuration Management for Public-Facing Application Entry Points
+
+## Policies
+
+1. Implement centralized runtime configuration management at application entry points using framework-specific configuration files. Each public-facing application establishes its configuration sources at the root level through dedicated configuration files that serve as the single source of truth for runtime settings, theming, and layout specifications. This approach leverages framework conventions (_document.tsx, layout.tsx, theme.config.tsx) to provide consistent configuration initialization across different application types within the monorepo.

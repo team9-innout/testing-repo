@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/reducer/actions/__tests__/**"]
+alwaysApply: false
+---
+
+# Comprehensive Unit Testing for Core Reducer Actions
+
+## Policies
+
+1. Implement dedicated unit test files for each core reducer action in the packages/core/reducer/actions/__tests__/ directory. Each action (duplicate, move, set-ui, replace, insert) has its own isolated test specification file following the naming convention [action-name].spec.ts. This ensures that every state transformation operation has comprehensive test coverage with clear separation of concerns.

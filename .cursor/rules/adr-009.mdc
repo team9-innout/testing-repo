@@ -1,0 +1,10 @@
+---
+globs: ["packages/core/**"]
+alwaysApply: false
+---
+
+# Adopt Co-located Test Files with __tests__ Directory Convention
+
+## Policies
+
+1. Adopt the __tests__ directory convention for co-locating unit tests with source code. Test files are placed in __tests__ subdirectories adjacent to the code they test, using the .spec.tsx extension for React component tests and TypeScript files. This pattern is consistently applied across different architectural layers: UI components (Puck), library utilities (resolve-component-data, migrate), and internal helpers (reducer actions). The convention follows Jest's default test discovery patterns and React Testing Library practices for component testing.
